@@ -1,0 +1,19 @@
+// Colors
+$primary: #00ff15;
+$secondary: #00ffff;
+$dark: #282c34;
+$black: #111;
+$white: #fff;
+
+// Fonts
+$primary-font-family: 'Rubik', sans-serif;
+
+// Breakpoints and sizes
+$breakpoints: (
+  xs: 375px,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+);
+$max-width: map-get($breakpoints, 'xl');
