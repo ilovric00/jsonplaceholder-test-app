@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/jsonplaceholder-test-app/static/css/main.eeb4ae37.css",
+    "main.js": "/jsonplaceholder-test-app/static/js/main.e2715301.js",
+    "static/js/787.faad60b8.chunk.js": "/jsonplaceholder-test-app/static/js/787.faad60b8.chunk.js",
+    "static/media/logo.svg": "/jsonplaceholder-test-app/static/media/logo.4bdbcf8396881de06a6723a92fed910b.svg",
+    "index.html": "/jsonplaceholder-test-app/index.html",
+    "main.eeb4ae37.css.map": "/jsonplaceholder-test-app/static/css/main.eeb4ae37.css.map",
+    "main.e2715301.js.map": "/jsonplaceholder-test-app/static/js/main.e2715301.js.map",
+    "787.faad60b8.chunk.js.map": "/jsonplaceholder-test-app/static/js/787.faad60b8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eeb4ae37.css",
+    "static/js/main.e2715301.js"
+  ]
+}
