@@ -2,6 +2,7 @@
   "name": "jsonplaceholder-test-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ilovric00.github.io/jsonplaceholder-test-app",
   "scripts": {
     "prepare": "husky install",
     "start": "react-scripts start",
@@ -10,7 +11,9 @@
     "test:cov": "yarn test --coverage",
     "test:ci": "CI=true yarn test",
     "lint:base": "eslint --ext .ts,.tsx src/",
-    "lint": "pretty-quick --staged && yarn lint:base --fix"
+    "lint": "pretty-quick --staged && yarn lint:base --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,8 +47,8 @@
     "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.13",
-    "@types/react-dom": "^18.0.0",
     "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "@typescript-eslint/parser": "^5.48.2",
     "eslint": "^8.32.0",
@@ -57,6 +60,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.1",
     "prettier": "^2.8.3",
     "pretty-quick": "^3.1.3",
