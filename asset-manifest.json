@@ -1,16 +1,23 @@
 {
   "files": {
-    "main.css": "/jsonplaceholder-test-app/static/css/main.eeb4ae37.css",
+    "main.css": "/jsonplaceholder-test-app/static/css/main.561f4e77.css",
     "main.js": "/jsonplaceholder-test-app/static/js/main.1cacd312.js",
     "static/js/787.faad60b8.chunk.js": "/jsonplaceholder-test-app/static/js/787.faad60b8.chunk.js",
+    "static/media/Rubik-Regular.ttf": "/jsonplaceholder-test-app/static/media/Rubik-Regular.705a89f52bdf93b960ed.ttf",
+    "static/media/Rubik-Medium.ttf": "/jsonplaceholder-test-app/static/media/Rubik-Medium.e41132b912f5c264d4f0.ttf",
+    "static/media/Rubik-SemiBold.ttf": "/jsonplaceholder-test-app/static/media/Rubik-SemiBold.4bc5c511d3be812971dc.ttf",
+    "static/media/Rubik-Bold.ttf": "/jsonplaceholder-test-app/static/media/Rubik-Bold.b24c64f715ba25a6e7f5.ttf",
+    "static/media/Rubik-ExtraBold.ttf": "/jsonplaceholder-test-app/static/media/Rubik-ExtraBold.9f2b87287dcab16cb065.ttf",
+    "static/media/Rubik-Black.ttf": "/jsonplaceholder-test-app/static/media/Rubik-Black.dfebf224e7d950b7cd61.ttf",
+    "static/media/Rubik-Light.ttf": "/jsonplaceholder-test-app/static/media/Rubik-Light.b269c92bc326f0d43f54.ttf",
     "static/media/logo.svg": "/jsonplaceholder-test-app/static/media/logo.9ee9c40257597c6bec1aa38938be0c43.svg",
     "index.html": "/jsonplaceholder-test-app/index.html",
-    "main.eeb4ae37.css.map": "/jsonplaceholder-test-app/static/css/main.eeb4ae37.css.map",
+    "main.561f4e77.css.map": "/jsonplaceholder-test-app/static/css/main.561f4e77.css.map",
     "main.1cacd312.js.map": "/jsonplaceholder-test-app/static/js/main.1cacd312.js.map",
     "787.faad60b8.chunk.js.map": "/jsonplaceholder-test-app/static/js/787.faad60b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eeb4ae37.css",
+    "static/css/main.561f4e77.css",
     "static/js/main.1cacd312.js"
   ]
 }
