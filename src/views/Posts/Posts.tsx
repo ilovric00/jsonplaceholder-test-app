@@ -1,18 +1,16 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Layout from 'components/Layout';
+import Post from 'components/Post';
 import PostType from 'types/post';
-import User from 'types/user';
 import JSONPlaceholderService from 'services/JSONPlaceholderService';
 
-import { UsersContextProvider } from 'utils/context/UsersContext';
+import { Link } from 'react-router-dom';
 import { INITIAL_PAGE_NUMBER, INITIAL_PAGE_SIZE, MAX_COUNT } from 'config/constants';
 
 import SearchInput from './partials/SearchInput';
-import Post from './partials/Post';
 import LoadMoreButton from './partials/LoadMoreButton';
 
 const Posts: React.FC = () => {
-  const [users, setUsers] = useState<User[] | null>([]);
   const [posts, setPosts] = useState<PostType[] | null>([]);
   const [searchInput, setSearchInput] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
@@ -34,16 +32,6 @@ const Posts: React.FC = () => {
     fetchPosts();
   }, [pageNumber]);
 
-  useEffect(() => {
-    const fetchUsers = async () => {
-      const response = await JSONPlaceholderService.getUsers();
-
-      setUsers(response);
-    };
-
-    fetchUsers();
-  }, []);
-
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInput(event.target.value);
   };
@@ -60,11 +48,11 @@ const Posts: React.FC = () => {
   return (
     <Layout>
       <SearchInput onChange={handleChange} />
-      <UsersContextProvider value={{ users }}>
-        {filteredPosts?.map(post => (
-          <Post key={post.id} post={post} />
-        ))}
-      </UsersContextProvider>
+      {filteredPosts?.map(post => (
+        <Link key={post.id} to={`/post/${post.id}`}>
+          <Post post={post} />
+        </Link>
+      ))}
       <LoadMoreButton
         loading={loading}
         visibility={Boolean(posts && posts?.length < MAX_COUNT)}

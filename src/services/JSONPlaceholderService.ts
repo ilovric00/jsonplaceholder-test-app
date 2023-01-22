@@ -36,4 +36,15 @@ export default class JSONPlaceholderService {
       return null;
     }
   };
+
+  public static getSinglePost = async ({ postId }: { postId: string }): Promise<Post | null> => {
+    try {
+      const response = await fetch(`${API_URL}/posts/${postId}`);
+      const json: Post = await response.json();
+
+      return json;
+    } catch {
+      return null;
+    }
+  };
 }
