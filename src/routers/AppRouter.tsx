@@ -3,17 +3,17 @@ import Home from 'views/Home';
 import Posts from 'views/Posts';
 import Post from 'views/Post';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
 const AppRouter: React.FC = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/posts" element={<Posts />} />
       <Route path="/post/:id" element={<Post />} />
       <Route path="*" element={<div>Not found</div>} />
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default AppRouter;

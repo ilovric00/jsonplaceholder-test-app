@@ -2,7 +2,7 @@
   "name": "jsonplaceholder-test-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ilovric00.github.io/jsonplaceholder-test-app",
+  "homepage": ".",
   "scripts": {
     "prepare": "husky install",
     "start": "react-scripts start",
