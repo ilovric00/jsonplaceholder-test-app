@@ -1,0 +1,33 @@
+@import 'styles/settings/variables';
+@import 'styles/utils/typographies';
+@import 'styles/utils/rem-calc.scss';
+
+.button {
+  @extend .button-1;
+  background-color: $dark;
+  border-radius: rem-calc(8);
+  border: rem-calc(1) solid transparent;
+  color: $white;
+  cursor: pointer;
+  margin-bottom: rem-calc(16);
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &.small {
+    padding: rem-calc(7 16);
+  }
+
+  &.medium {
+    padding: rem-calc(12 20);
+  }
+
+  &.large {
+    padding: rem-calc(14 20);
+  }
+
+  &.extra-large {
+    padding: rem-calc(20 20);
+  }
+}

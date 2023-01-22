@@ -1,0 +1,91 @@
+@import 'styles/settings/variables';
+@import 'styles/utils/typographies';
+
+.typography {
+  color: $dark;
+
+  // Headlines
+  &.h1 {
+    @extend .h1;
+  }
+
+  &.h2 {
+    @extend .h2;
+  }
+
+  &.h3 {
+    @extend .h3;
+  }
+
+  &.h4 {
+    @extend .h4;
+  }
+
+  &.h5 {
+    @extend .h5;
+  }
+
+  &.h6 {
+    @extend .h6;
+  }
+
+  // Subtitles
+  &.subtitle1 {
+    @extend .subtitle-1;
+  }
+
+  &.subtitle2 {
+    @extend .subtitle-2;
+  }
+
+  &.subtitle3 {
+    @extend .subtitle-3;
+  }
+
+  &.subtitle4 {
+    @extend .subtitle-4;
+  }
+
+  // Body
+  &.body1 {
+    @extend .body-1;
+  }
+
+  &.body2 {
+    @extend .body-2;
+  }
+
+  &.body3 {
+    @extend .body-3;
+  }
+
+  &.body4 {
+    @extend .body-4;
+  }
+
+  // Labels
+  &.label1 {
+    @extend .label-1;
+  }
+
+  &.label2 {
+    @extend .label-2;
+  }
+
+  &.label3 {
+    @extend .label-3;
+  }
+
+  // Buttons
+  &.button1 {
+    @extend .button-1;
+  }
+
+  &.button2 {
+    @extend .button-2;
+  }
+
+  &.button3 {
+    @extend .button-3;
+  }
+}

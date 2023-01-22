@@ -1,0 +1,149 @@
+@import 'styles/utils/rem-calc.scss';
+
+// Headlines
+.h1 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(32);
+  font-weight: 700;
+  line-height: rem-calc(40);
+}
+
+.h2 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(32);
+  font-weight: 600;
+  line-height: rem-calc(40);
+}
+
+.h3 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(24);
+  font-weight: 700;
+  line-height: rem-calc(32);
+}
+
+.h4 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(18);
+  font-weight: 700;
+  line-height: rem-calc(26);
+}
+
+.h5 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(18);
+  font-weight: 600;
+  line-height: rem-calc(26);
+}
+
+.h6 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(16);
+  font-weight: 700;
+  line-height: rem-calc(24);
+}
+
+// Subtitles
+.subtitle-1 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(32);
+  font-weight: 600;
+  line-height: rem-calc(40);
+}
+
+.subtitle-2 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(15);
+  font-weight: 700;
+  line-height: rem-calc(24);
+}
+
+.subtitle-3 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(15);
+  font-weight: 600;
+  line-height: rem-calc(24);
+}
+
+.subtitle-4 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(12);
+  font-weight: 600;
+  line-height: rem-calc(14);
+  text-transform: uppercase;
+}
+
+// Body
+.body-1 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(16);
+  font-weight: 400;
+  line-height: rem-calc(24);
+}
+
+.body-2 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(15);
+  font-weight: 400;
+  line-height: rem-calc(24);
+}
+
+.body-3 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(14);
+  font-weight: 400;
+  line-height: rem-calc(22);
+}
+
+.body-4 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(12);
+  font-weight: 400;
+  line-height: rem-calc(14);
+}
+
+// Labels
+.label-1 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(14);
+  font-weight: 600;
+  line-height: rem-calc(22);
+  text-transform: uppercase;
+}
+
+.label-2 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(10);
+  font-weight: 600;
+  line-height: rem-calc(14);
+}
+
+.label-3 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(9);
+  font-weight: 600;
+  line-height: rem-calc(14);
+  text-transform: uppercase;
+}
+
+// Buttons
+.button-1 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(15);
+  font-weight: 700;
+  line-height: rem-calc(24);
+}
+
+.button-2 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(14);
+  font-weight: 700;
+  line-height: rem-calc(20);
+}
+
+.button-3 {
+  font-family: $primary-font-family;
+  font-size: rem-calc(14);
+  font-weight: 600;
+  line-height: rem-calc(20);
+}

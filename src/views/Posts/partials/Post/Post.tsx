@@ -1,4 +1,5 @@
 import React from 'react';
+import Typography from 'components/Typography';
 import PostType from 'types/post';
 
 import CommentList from './CommentList';
@@ -13,7 +14,9 @@ interface PostProps {
 const Post: React.FC<PostProps> = ({ post }) => (
   <article className={styles.container}>
     <UserFullName userId={post.userId} />
-    <h2>{post.title}</h2>
+    <Typography component="h2" variant="h3">
+      {post.title}
+    </Typography>
     <CommentList postId={post.id} />
   </article>
 );
