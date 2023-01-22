@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/jsonplaceholder-test-app/static/css/main.3bdc318b.css",
-    "main.js": "/jsonplaceholder-test-app/static/js/main.2efd28a0.js",
+    "main.css": "/jsonplaceholder-test-app/static/css/main.443a601f.css",
+    "main.js": "/jsonplaceholder-test-app/static/js/main.c5453857.js",
     "static/js/787.faad60b8.chunk.js": "/jsonplaceholder-test-app/static/js/787.faad60b8.chunk.js",
     "static/media/Rubik-Regular.ttf": "/jsonplaceholder-test-app/static/media/Rubik-Regular.705a89f52bdf93b960ed.ttf",
     "static/media/Rubik-Medium.ttf": "/jsonplaceholder-test-app/static/media/Rubik-Medium.e41132b912f5c264d4f0.ttf",
@@ -11,12 +11,12 @@
     "static/media/Rubik-Black.ttf": "/jsonplaceholder-test-app/static/media/Rubik-Black.dfebf224e7d950b7cd61.ttf",
     "static/media/Rubik-Light.ttf": "/jsonplaceholder-test-app/static/media/Rubik-Light.b269c92bc326f0d43f54.ttf",
     "index.html": "/jsonplaceholder-test-app/index.html",
-    "main.3bdc318b.css.map": "/jsonplaceholder-test-app/static/css/main.3bdc318b.css.map",
-    "main.2efd28a0.js.map": "/jsonplaceholder-test-app/static/js/main.2efd28a0.js.map",
+    "main.443a601f.css.map": "/jsonplaceholder-test-app/static/css/main.443a601f.css.map",
+    "main.c5453857.js.map": "/jsonplaceholder-test-app/static/js/main.c5453857.js.map",
     "787.faad60b8.chunk.js.map": "/jsonplaceholder-test-app/static/js/787.faad60b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3bdc318b.css",
-    "static/js/main.2efd28a0.js"
+    "static/css/main.443a601f.css",
+    "static/js/main.c5453857.js"
   ]
 }
