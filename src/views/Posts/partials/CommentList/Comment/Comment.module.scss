@@ -1,0 +1,18 @@
+@import 'styles/settings/variables.scss';
+@import 'styles/utils/rem-calc.scss';
+
+.container {
+  padding-bottom: rem-calc(16);
+  padding-left: rem-calc(30);
+  text-indent: rem-calc(-30);
+
+  &:last-child {
+    padding-bottom: unset;
+  }
+
+  &::before {
+    content: '\2015';
+    color: $primary;
+    padding-right: rem-calc(12);
+  }
+}

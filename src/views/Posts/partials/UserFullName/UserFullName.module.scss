@@ -1,0 +1,7 @@
+@import 'styles/settings/variables.scss';
+@import 'styles/utils/rem-calc.scss';
+
+.container {
+  font-size: rem-calc(18);
+  font-weight: 600;
+}

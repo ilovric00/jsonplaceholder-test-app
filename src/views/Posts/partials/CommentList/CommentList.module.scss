@@ -1,0 +1,5 @@
+@import 'styles/utils/rem-calc.scss';
+
+.container {
+  padding: rem-calc(12 0);
+}
