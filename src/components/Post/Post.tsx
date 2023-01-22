@@ -17,6 +17,9 @@ const Post: React.FC<PostProps> = ({ post }) => (
     <Typography component="h2" variant="h3">
       {post.title}
     </Typography>
+    <Typography variant="body2" className={styles.body}>
+      {post.body}
+    </Typography>
     <CommentList postId={post.id} />
   </article>
 );
