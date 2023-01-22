@@ -1,0 +1,31 @@
+@import 'styles/settings/variables.scss';
+@import 'styles/utils/rem-calc.scss';
+@import 'styles/mixins/breakpoints.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: $grey-400;
+
+  .navbar {
+    margin: 0 auto;
+    max-width: rem-calc($max-width);
+    padding: rem-calc(16 0);
+    width: 100%;
+
+    @include media(0, 'md') {
+      padding: rem-calc(16);
+    }
+
+    .brand {
+      color: $white;
+      font-size: rem-calc(18);
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+      }
+    }
+  }
+}

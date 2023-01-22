@@ -1,0 +1,17 @@
+@import 'styles/settings/variables.scss';
+@import 'styles/utils/rem-calc.scss';
+@import 'styles/mixins/breakpoints.scss';
+
+.container {
+  min-height: 100vh;
+
+  .main {
+    margin: 0 auto;
+    max-width: rem-calc($max-width);
+    padding: rem-calc(16 0);
+
+    @include media(0, 'md') {
+      padding: rem-calc(16);
+    }
+  }
+}

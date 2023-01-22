@@ -1,6 +1,8 @@
 import React from 'react';
 import Logo from 'components/SvgIcons/Logo';
 
+import { Link } from 'react-router-dom';
+
 import styles from './Home.module.scss';
 
 const Home: React.FC = () => (
@@ -8,9 +10,9 @@ const Home: React.FC = () => (
     <div className={styles.wrapper}>
       <Logo className={styles.logo} />
       <h1 className={styles.heading}>React Test Assignement</h1>
-      <a className={styles.link} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+      <Link to="/posts" className={styles.link}>
         Go to task
-      </a>
+      </Link>
     </div>
   </div>
 );
