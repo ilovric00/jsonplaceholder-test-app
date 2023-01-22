@@ -1,16 +1,17 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Layout from 'components/Layout';
-import Post from 'types/post';
+import PostType from 'types/post';
 import User from 'types/user';
 import JSONPlaceholderService from 'services/JSONPlaceholderService';
 
+import { UsersContextProvider } from 'utils/context/UsersContext';
+
 import SearchInput from './partials/SearchInput';
-import UserFullName from './partials/UserFullName';
-import CommentList from './partials/CommentList';
+import Post from './partials/Post';
 
 const Posts: React.FC = () => {
   const [users, setUsers] = useState<User[] | null>([]);
-  const [posts, setPosts] = useState<Post[] | null>([]);
+  const [posts, setPosts] = useState<PostType[] | null>([]);
   const [searchInput, setSearchInput] = useState<string>('');
 
   useEffect(() => {
@@ -45,13 +46,11 @@ const Posts: React.FC = () => {
   return (
     <Layout>
       <SearchInput onChange={handleChange} />
-      {filteredPosts?.map(post => (
-        <article key={post.id}>
-          <UserFullName users={users} userId={post.userId} />
-          <h2>{post.title}</h2>
-          <CommentList postId={post.id} />
-        </article>
-      ))}
+      <UsersContextProvider value={{ users }}>
+        {filteredPosts?.map(post => (
+          <Post key={post.id} post={post} />
+        ))}
+      </UsersContextProvider>
     </Layout>
   );
 };

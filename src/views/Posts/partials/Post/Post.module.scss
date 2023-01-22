@@ -1,0 +1,10 @@
+@import 'styles/settings/variables.scss';
+@import 'styles/utils/rem-calc.scss';
+
+.container {
+  color: $grey-400;
+  margin: rem-calc(20 0);
+  padding: 1.25rem;
+  border: rem-calc(1) solid $grey-100;
+  border-radius: rem-calc(3);
+}
