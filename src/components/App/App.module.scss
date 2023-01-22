@@ -1,0 +1,39 @@
+@import 'styles/settings/variables.scss';
+@import 'styles/utils/rem-calc.scss';
+@import 'styles/globals/animations.scss';
+
+.container {
+  text-align: center;
+
+  .wrapper {
+    background-color: $dark;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: $white;
+
+    .logo {
+      height: rem-calc(500);
+
+      @media (prefers-reduced-motion: no-preference) {
+        animation: spin infinite 20s linear;
+      }
+    }
+
+    .heading {
+      font-weight: 300;
+    }
+
+    .link {
+      color: $secondary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
