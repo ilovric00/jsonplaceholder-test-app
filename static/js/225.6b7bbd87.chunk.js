@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkjsonplaceholder_test_app=self.webpackChunkjsonplaceholder_test_app||[]).push([[225],{225:function(e,n,t){t.r(n),t.d(n,{default:function(){return c}});t(791);var a=t(906),r="Comment_container__+tphO",s=t(184),c=(0,a.Z)((function(e){var n=e.name;return(0,s.jsx)("li",{className:r,children:n})}))}}]);
-//# sourceMappingURL=225.6b7bbd87.chunk.js.map

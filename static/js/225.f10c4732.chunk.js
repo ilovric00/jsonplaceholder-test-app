@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkjsonplaceholder_test_app=self.webpackChunkjsonplaceholder_test_app||[]).push([[225],{225:function(e,t,n){n.r(t),n.d(t,{default:function(){return r}});n(791);var a=n(906),c="Comment_container__+tphO",s=n(184),r=(0,a.Z)((function(e){var t=e.id,n=e.name;return(0,s.jsx)("li",{"data-testid":"comment-".concat(t),className:c,children:n})}))}}]);
+//# sourceMappingURL=225.f10c4732.chunk.js.map
