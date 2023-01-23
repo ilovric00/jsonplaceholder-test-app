@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import Layout from 'components/Layout';
 import LoadingIcon from 'components/LoadingIcon';
+import Typography from 'components/Typography';
 
 import PostType from 'types/post';
 import JSONPlaceholderService from 'services/JSONPlaceholderService';
@@ -46,12 +47,24 @@ const Posts: React.FC = () => {
   );
 
   const handleLoadMore = () => {
-    setPageNumber(pageNumber + 1);
+    setSearchInput('');
+    setPageNumber(prev => prev + 1);
   };
+
+  if (!filteredPosts?.length) {
+    return (
+      <Layout>
+        <SearchInput searchInput={searchInput} onChange={handleChange} />
+        <Typography component="p" variant="h3">
+          No results!
+        </Typography>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
-      <SearchInput onChange={handleChange} />
+      <SearchInput searchInput={searchInput} onChange={handleChange} />
       {filteredPosts?.map(post => (
         <Suspense key={post.id} fallback={<LoadingIcon />}>
           <Link to={`/post/${post.id}`}>
