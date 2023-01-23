@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { lazy, Suspense, useEffect, useState } from 'react';
+import LoadingIcon from 'components/LoadingIcon';
 import JSONPlaceholderService from 'services/JSONPlaceholderService';
 import CommentType from 'types/comment';
-
-import Comment from './Comment';
+import withLogger from 'utils/hoc/withLogger';
 
 import styles from './CommentList.module.scss';
+
+const Comment = lazy(() => import('./Comment'));
 
 interface CommentListProps {
   postId: number;
@@ -26,10 +28,12 @@ const CommentList: React.FC<CommentListProps> = ({ postId }) => {
   return (
     <ul className={styles.container}>
       {comments?.map(comment => (
-        <Comment key={comment.id} name={comment.name} />
+        <Suspense key={comment.id} fallback={<LoadingIcon />}>
+          <Comment name={comment.name} />
+        </Suspense>
       ))}
     </ul>
   );
 };
 
-export default CommentList;
+export default withLogger(CommentList);

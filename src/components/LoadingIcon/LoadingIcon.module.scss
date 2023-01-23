@@ -1,0 +1,12 @@
+@import 'styles/settings/variables';
+@import 'styles/utils/rem-calc.scss';
+@import 'styles/globals/animations.scss';
+
+.container {
+  width: rem-calc(15);
+  height: rem-calc(15);
+  border-radius: 50%;
+  border: rem-calc(1) solid $primary;
+  border-color: $primary transparent $primary transparent;
+  animation: spin 1.2s linear infinite;
+}

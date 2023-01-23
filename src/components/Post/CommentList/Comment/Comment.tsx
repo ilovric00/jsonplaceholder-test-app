@@ -1,4 +1,5 @@
 import React from 'react';
+import withLogger from 'utils/hoc/withLogger';
 
 import styles from './Comment.module.scss';
 
@@ -8,4 +9,4 @@ interface CommentProps {
 
 const Comment: React.FC<CommentProps> = ({ name }) => <li className={styles.container}>{name}</li>;
 
-export default Comment;
+export default withLogger(Comment);

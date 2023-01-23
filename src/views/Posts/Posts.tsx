@@ -1,6 +1,7 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import Layout from 'components/Layout';
-import Post from 'components/Post';
+import LoadingIcon from 'components/LoadingIcon';
+
 import PostType from 'types/post';
 import JSONPlaceholderService from 'services/JSONPlaceholderService';
 import withLogger from 'utils/hoc/withLogger';
@@ -10,6 +11,8 @@ import { INITIAL_PAGE_NUMBER, INITIAL_PAGE_SIZE, MAX_COUNT } from 'config/consta
 
 import SearchInput from './partials/SearchInput';
 import LoadMoreButton from './partials/LoadMoreButton';
+
+const Post = lazy(() => import('components/Post'));
 
 const Posts: React.FC = () => {
   const [posts, setPosts] = useState<PostType[] | null>([]);
@@ -50,9 +53,11 @@ const Posts: React.FC = () => {
     <Layout>
       <SearchInput onChange={handleChange} />
       {filteredPosts?.map(post => (
-        <Link key={post.id} to={`/post/${post.id}`}>
-          <Post post={post} />
-        </Link>
+        <Suspense key={post.id} fallback={<LoadingIcon />}>
+          <Link to={`/post/${post.id}`}>
+            <Post post={post} />
+          </Link>
+        </Suspense>
       ))}
       <LoadMoreButton
         loading={loading}
