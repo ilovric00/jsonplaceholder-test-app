@@ -29,7 +29,7 @@ const CommentList: React.FC<CommentListProps> = ({ postId }) => {
     <ul className={styles.container}>
       {comments?.map(comment => (
         <Suspense key={comment.id} fallback={<LoadingIcon />}>
-          <Comment name={comment.name} />
+          <Comment id={comment.id} name={comment.name} />
         </Suspense>
       ))}
     </ul>

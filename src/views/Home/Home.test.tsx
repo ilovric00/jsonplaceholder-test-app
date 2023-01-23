@@ -1,18 +1,19 @@
 import React from 'react';
 
 import { render, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 import Home from './Home';
 
-test('renders go to task link', () => {
+test('should render link to task', () => {
   render(
-    <BrowserRouter>
+    <HashRouter>
       <Home />
-    </BrowserRouter>
+    </HashRouter>
   );
 
-  const linkElement = screen.getByText(/go to task/i);
+  const linkElement = screen.getByTestId('link');
 
   expect(linkElement).toBeInTheDocument();
+  expect(linkElement).toHaveTextContent('Go to task');
 });

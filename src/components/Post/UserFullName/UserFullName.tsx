@@ -15,7 +15,7 @@ const UserFullName: React.FC<UserFullNameProps> = ({ userId }) => {
   const fullName = useUserFullName(users, userId);
 
   return (
-    <Typography variant="label1" className={styles.container}>
+    <Typography data-testid={`userFullName-${userId}`} variant="label1" className={styles.container}>
       {fullName.name}
     </Typography>
   );

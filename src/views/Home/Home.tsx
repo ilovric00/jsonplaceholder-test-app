@@ -14,7 +14,7 @@ const Home: React.FC = () => (
       <Typography variant="h1" className={styles.heading}>
         React Test Assignement
       </Typography>
-      <Link to="/posts" className={styles.link}>
+      <Link data-testid="link" to="/posts" className={styles.link}>
         Go to task
       </Link>
     </div>
