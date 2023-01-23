@@ -5,7 +5,7 @@ import withLogger from 'utils/hoc/withLogger';
 import styles from './Layout.module.scss';
 
 const Layout: React.FC<PropsWithChildren> = ({ children }) => (
-  <div className={styles.container}>
+  <div data-testid="layout" className={styles.container}>
     <Header />
     <main className={styles.main}>{children}</main>
   </div>

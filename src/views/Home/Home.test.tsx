@@ -5,15 +5,40 @@ import { HashRouter } from 'react-router-dom';
 
 import Home from './Home';
 
-test('should render link to task', () => {
-  render(
-    <HashRouter>
-      <Home />
-    </HashRouter>
-  );
+describe('Home', () => {
+  it('renders a logo', () => {
+    render(
+      <HashRouter>
+        <Home />
+      </HashRouter>
+    );
+    expect(screen.getByTestId('logo')).toBeInTheDocument();
+  });
 
-  const linkElement = screen.getByTestId('link');
+  it('renders the heading', () => {
+    render(
+      <HashRouter>
+        <Home />
+      </HashRouter>
+    );
+    expect(screen.getByText('React Test Assignement')).toBeInTheDocument();
+  });
 
-  expect(linkElement).toBeInTheDocument();
-  expect(linkElement).toHaveTextContent('Go to task');
+  it('renders the link', () => {
+    render(
+      <HashRouter>
+        <Home />
+      </HashRouter>
+    );
+    expect(screen.getByTestId('link')).toBeInTheDocument();
+  });
+
+  it('has the correct link', () => {
+    render(
+      <HashRouter>
+        <Home />
+      </HashRouter>
+    );
+    expect(screen.getByTestId('link').getAttribute('href')).toBe('#/posts');
+  });
 });

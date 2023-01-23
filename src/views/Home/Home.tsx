@@ -10,7 +10,7 @@ import styles from './Home.module.scss';
 const Home: React.FC = () => (
   <div className={styles.container}>
     <div className={styles.wrapper}>
-      <Logo className={styles.logo} />
+      <Logo data-testid="logo" className={styles.logo} />
       <Typography variant="h1" className={styles.heading}>
         React Test Assignement
       </Typography>

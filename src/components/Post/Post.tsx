@@ -13,12 +13,12 @@ interface PostProps {
 }
 
 const Post: React.FC<PostProps> = ({ post }) => (
-  <article data-testid={`post-${post.id}`} className={styles.container}>
+  <article data-testid="post" className={styles.container}>
     <UserFullName userId={post.userId} />
-    <Typography component="h2" variant="h3">
+    <Typography component="h2" variant="h3" data-testid="post-title">
       {post.title}
     </Typography>
-    <Typography variant="body2" className={styles.body}>
+    <Typography variant="body2" className={styles.body} data-testid="post-body">
       {post.body}
     </Typography>
     <CommentList postId={post.id} />

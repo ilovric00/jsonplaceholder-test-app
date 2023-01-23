@@ -7,6 +7,8 @@ interface LoadingIconProps {
   className?: string;
 }
 
-const LoadingIcon: React.FC<LoadingIconProps> = ({ className }) => <div className={cx(styles.container, className)} />;
+const LoadingIcon: React.FC<LoadingIconProps> = ({ className }) => (
+  <div data-testid="loading-icon" className={cx(styles.container, className)} />
+);
 
 export default LoadingIcon;
