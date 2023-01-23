@@ -3,6 +3,7 @@ import AppRouter from 'routers/AppRouter';
 import JSONPlaceholderService from 'services/JSONPlaceholderService';
 import User from 'types/user';
 
+import { LoggerContextProvider } from 'utils/context/LoggerContext';
 import { UsersContextProvider } from 'utils/context/UsersContext';
 
 const App: React.FC = () => {
@@ -19,9 +20,11 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <UsersContextProvider value={{ users }}>
-      <AppRouter />
-    </UsersContextProvider>
+    <LoggerContextProvider value={{ message: 'Hello from ' }}>
+      <UsersContextProvider value={{ users }}>
+        <AppRouter />
+      </UsersContextProvider>
+    </LoggerContextProvider>
   );
 };
 

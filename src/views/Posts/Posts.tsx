@@ -3,6 +3,7 @@ import Layout from 'components/Layout';
 import Post from 'components/Post';
 import PostType from 'types/post';
 import JSONPlaceholderService from 'services/JSONPlaceholderService';
+import withLogger from 'utils/hoc/withLogger';
 
 import { Link } from 'react-router-dom';
 import { INITIAL_PAGE_NUMBER, INITIAL_PAGE_SIZE, MAX_COUNT } from 'config/constants';
@@ -62,4 +63,4 @@ const Posts: React.FC = () => {
   );
 };
 
-export default Posts;
+export default withLogger(Posts);

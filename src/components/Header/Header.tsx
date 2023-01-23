@@ -1,4 +1,6 @@
 import React from 'react';
+import withLogger from 'utils/hoc/withLogger';
+
 import { NavLink } from 'react-router-dom';
 
 import styles from './Header.module.scss';
@@ -13,4 +15,4 @@ const Header: React.FC = () => (
   </header>
 );
 
-export default Header;
+export default withLogger(Header);

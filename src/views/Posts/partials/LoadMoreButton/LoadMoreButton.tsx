@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from 'components/Button';
+import withLogger from 'utils/hoc/withLogger';
 
 interface LoadMoreButtonProps {
   loading: boolean;
@@ -19,4 +20,4 @@ const LoadMoreButton: React.FC<LoadMoreButtonProps> = ({ loading, visibility = t
   );
 };
 
-export default LoadMoreButton;
+export default withLogger(LoadMoreButton);

@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 import Header from 'components/Header';
+import withLogger from 'utils/hoc/withLogger';
 
 import styles from './Layout.module.scss';
 
@@ -10,4 +11,4 @@ const Layout: React.FC<PropsWithChildren> = ({ children }) => (
   </div>
 );
 
-export default Layout;
+export default withLogger(Layout);

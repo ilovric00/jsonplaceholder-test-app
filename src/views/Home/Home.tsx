@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from 'components/SvgIcons/Logo';
 import Typography from 'components/Typography';
+import withLogger from 'utils/hoc/withLogger';
 
 import { Link } from 'react-router-dom';
 
@@ -20,4 +21,4 @@ const Home: React.FC = () => (
   </div>
 );
 
-export default Home;
+export default withLogger(Home);

@@ -1,4 +1,5 @@
 import React from 'react';
+import withLogger from 'utils/hoc/withLogger';
 
 import styles from './SearchInput.module.scss';
 
@@ -12,4 +13,4 @@ const SearchInput: React.FC<SearchInputProps> = ({ onChange }) => (
   </div>
 );
 
-export default SearchInput;
+export default withLogger(SearchInput);

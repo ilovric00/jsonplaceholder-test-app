@@ -1,6 +1,7 @@
 import React from 'react';
 import Typography from 'components/Typography';
 import PostType from 'types/post';
+import withLogger from 'utils/hoc/withLogger';
 
 import CommentList from './CommentList';
 import UserFullName from './UserFullName';
@@ -24,4 +25,4 @@ const Post: React.FC<PostProps> = ({ post }) => (
   </article>
 );
 
-export default Post;
+export default withLogger(Post);

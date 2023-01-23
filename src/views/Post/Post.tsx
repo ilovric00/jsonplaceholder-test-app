@@ -4,6 +4,7 @@ import Layout from 'components/Layout';
 import Post from 'components/Post';
 import PostType from 'types/post';
 import JSONPlaceholderService from 'services/JSONPlaceholderService';
+import withLogger from 'utils/hoc/withLogger';
 
 import { Link, useParams } from 'react-router-dom';
 
@@ -35,4 +36,4 @@ const SinglePost: React.FC = () => {
   );
 };
 
-export default SinglePost;
+export default withLogger(SinglePost);
