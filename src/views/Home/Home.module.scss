@@ -1,5 +1,6 @@
 @import 'styles/settings/variables.scss';
 @import 'styles/utils/rem-calc.scss';
+@import 'styles/mixins/breakpoints.scss';
 @import 'styles/globals/animations.scss';
 
 .container {
@@ -18,18 +19,31 @@
     .logo {
       height: rem-calc(500);
 
+      @include media(0, 'md') {
+        height: rem-calc(250);
+      }
+
       @media (prefers-reduced-motion: no-preference) {
         animation: spin infinite 20s linear;
       }
     }
 
     .heading {
+      color: $white;
       font-weight: 300;
+
+      @include media(0, 'md') {
+        max-width: rem-calc(300);
+      }
     }
 
     .link {
       color: $secondary;
       text-decoration: none;
+
+      @include media(0, 'md') {
+        margin-top: rem-calc(32);
+      }
 
       &:hover {
         text-decoration: underline;

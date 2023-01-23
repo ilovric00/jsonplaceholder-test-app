@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from 'components/SvgIcons/Logo';
+import Typography from 'components/Typography';
 
 import { Link } from 'react-router-dom';
 
@@ -9,7 +10,9 @@ const Home: React.FC = () => (
   <div className={styles.container}>
     <div className={styles.wrapper}>
       <Logo className={styles.logo} />
-      <h1 className={styles.heading}>React Test Assignement</h1>
+      <Typography variant="h1" className={styles.heading}>
+        React Test Assignement
+      </Typography>
       <Link to="/posts" className={styles.link}>
         Go to task
       </Link>
