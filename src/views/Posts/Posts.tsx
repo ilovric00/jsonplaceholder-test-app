@@ -2,10 +2,10 @@ import React, { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import Layout from 'components/Layout';
 import LoadingIcon from 'components/LoadingIcon';
 import Typography from 'components/Typography';
-
 import PostType from 'types/post';
 import JSONPlaceholderService from 'services/JSONPlaceholderService';
 import withLogger from 'utils/hoc/withLogger';
+import useDebounce from 'utils/hooks/useDebounce';
 
 import { Link } from 'react-router-dom';
 import { INITIAL_PAGE_NUMBER, INITIAL_PAGE_SIZE, MAX_COUNT } from 'config/constants';
@@ -17,9 +17,10 @@ const Post = lazy(() => import('components/Post'));
 
 const Posts: React.FC = () => {
   const [posts, setPosts] = useState<PostType[] | null>([]);
-  const [searchInput, setSearchInput] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [pageNumber, setPageNumber] = useState<number>(INITIAL_PAGE_NUMBER);
+  const [searchInput, setSearchInput] = useState<string>('');
+  const debouncedSearchInput = useDebounce<string>(searchInput, 500);
 
   useEffect(() => {
     setLoading(true);
@@ -37,13 +38,13 @@ const Posts: React.FC = () => {
     fetchPosts();
   }, [pageNumber]);
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInput(event.target.value);
   };
 
   const filteredPosts = useMemo(
-    () => posts?.filter(post => post.title.toLowerCase().includes(searchInput.toLowerCase())),
-    [posts, searchInput]
+    () => posts?.filter(post => post.title.toLowerCase().includes(debouncedSearchInput.toLowerCase())),
+    [posts, debouncedSearchInput]
   );
 
   const handleLoadMore = () => {
@@ -54,7 +55,7 @@ const Posts: React.FC = () => {
   if (!filteredPosts?.length) {
     return (
       <Layout>
-        <SearchInput searchInput={searchInput} onChange={handleChange} />
+        <SearchInput searchInput={searchInput} onChange={handleInputChange} />
         <Typography component="p" variant="h3">
           No results!
         </Typography>
@@ -64,7 +65,7 @@ const Posts: React.FC = () => {
 
   return (
     <Layout>
-      <SearchInput searchInput={searchInput} onChange={handleChange} />
+      <SearchInput searchInput={searchInput} onChange={handleInputChange} />
       {filteredPosts?.map(post => (
         <Suspense key={post.id} fallback={<LoadingIcon />}>
           <Link to={`/post/${post.id}`}>
