@@ -8,6 +8,7 @@ const withLogger =
   ({ ...props }) => {
     const { message } = useLogger();
 
+    // The displayName string is used in debugging messages when running the app locally.
     const getComponentName = () => Component.displayName || Component.name || 'Component';
 
     useEffect(() => {
